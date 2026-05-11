@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <header> // Mantém o mesmo header em todas as páginas para consistência
+            <h1>Nicoli Frezza</h1>
+            <nav>
+                <ul>
+                    <li><a href="sobre.html">Sobre Mim</a></li>
+                    <li><a href="formacao.html">Formação</a></li>
+                    <li><a href="portfolio.html">Portfólio</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="page-alert"><strong>Aviso:</strong> Preencha o formulário e receba um retorno em breve.</div> // Alerta para incentivar o contato
+            <div class="contact-grid">      //
+                <section class="section contact-details">
+                    <h1>Contato</h1>
+                    <p>Informações de Contato:</p>
+                    <ul>
+                        <li>Email: nicolifrezza@gmail.com</li>
+                        <li>Telefone: (49) 999357145</li>
+                        <li>Endereço: Santa Catarina, SC - Brasil</li>
+                    </ul>
+                </section>
+                <section class="section contact-form">
+                    <h2>Envie uma mensagem</h2>
+                    <form id="contactForm" action="enviar_mensagem.php" method="post">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" hidden> // Modal para feedback de envio de mensagem
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <h2 id="modalTitle">Aviso</h2>
+            <p id="modalMessage">Sua mensagem foi enviada com sucesso.</p>
+            <button type="button" id="modalClose">Fechar</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite"></div> // Toast para mensagens de erro ou sucesso
+    <script src="scripts.js" defer></script>
+</body>
+</html>
