@@ -6,7 +6,8 @@ const modalClose = document.querySelector('#modalClose');
 const toast = document.querySelector('#toast');
 let toastTimeout = null;
 
-function showModal(title, message) { // Exibe um modal com título e mensagem personalizados
+/* Exibe um modal com título e mensagem personalizados */
+function showModal(title, message) {
     if (!modalOverlay || !modalTitle || !modalMessage) {
         return;
     }
@@ -16,7 +17,8 @@ function showModal(title, message) { // Exibe um modal com título e mensagem pe
     modalOverlay.removeAttribute('hidden');
 }
 
-function hideModal() { // Esconde o modal
+/* Esconde o modal */
+function hideModal() {
     if (!modalOverlay) {
         return;
     }
@@ -24,7 +26,8 @@ function hideModal() { // Esconde o modal
     modalOverlay.setAttribute('hidden', '');
 }
 
-function showToast(message, type = 'success') { // Exibe um toast com mensagem e tipo (success ou error)
+/* Exibe um toast com mensagem e tipo (success ou error) */
+function showToast(message, type = 'success') {
     if (!toast) {
         return;
     }
@@ -45,7 +48,8 @@ if (contactForm) {
         const mensagem = contactForm.mensagem.value.trim();
 
         if (!nome || !email || !mensagem) {
-            showToast('Preencha todos os campos antes de enviar.', 'error'); // Validação simples para garantir que todos os campos sejam preenchidos
+            /* Validação simples para garantir que todos os campos sejam preenchidos */
+            showToast('Preencha todos os campos antes de enviar.', 'error');
             return;
         }
 
@@ -55,7 +59,8 @@ if (contactForm) {
     });
 }
 
-if (modalOverlay) { // Permite fechar o modal clicando fora da caixa de diálogo
+/* Permite fechar o modal clicando fora da caixa de diálogo */
+if (modalOverlay) {
     modalOverlay.addEventListener('click', (event) => {
         if (event.target === modalOverlay) {
             hideModal();
@@ -63,7 +68,8 @@ if (modalOverlay) { // Permite fechar o modal clicando fora da caixa de diálogo
     });
 }
 
-if (modalClose) { // Permite fechar o modal clicando no botão de fechar
+/* Permite fechar o modal clicando no botão de fechar */
+if (modalClose) {
     modalClose.addEventListener('click', hideModal);
 }
 

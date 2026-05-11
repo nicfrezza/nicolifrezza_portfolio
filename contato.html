@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="page">
-        <header> // Mantém o mesmo header em todas as páginas para consistência
+        <!-- Mantém o mesmo header em todas as páginas para consistência -->
+        <header>
             <h1>Nicoli Frezza</h1>
             <nav>
                 <ul>
@@ -20,8 +21,8 @@
             </nav>
         </header>
         <main>
-            <div class="page-alert"><strong>Aviso:</strong> Preencha o formulário e receba um retorno em breve.</div> // Alerta para incentivar o contato
-            <div class="contact-grid">      //
+            <div class="page-alert"><strong>Aviso:</strong> Preencha o formulário e receba um retorno em breve.</div>
+            <div class="contact-grid">
                 <section class="section contact-details">
                     <h1>Contato</h1>
                     <p>Informações de Contato:</p>
@@ -47,7 +48,8 @@
         </main>
     </div>
 
-    <div class="modal-overlay" id="modalOverlay" hidden> // Modal para feedback de envio de mensagem
+    <!-- Modal para feedback de envio de mensagem -->
+    <div class="modal-overlay" id="modalOverlay" hidden>
         <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
             <h2 id="modalTitle">Aviso</h2>
             <p id="modalMessage">Sua mensagem foi enviada com sucesso.</p>
@@ -55,7 +57,7 @@
         </div>
     </div>
 
-    <div class="toast" id="toast" aria-live="polite"></div> // Toast para mensagens de erro ou sucesso
+    <div class="toast" id="toast" aria-live="polite"></div>
     <script src="scripts.js" defer></script>
 </body>
 </html>
